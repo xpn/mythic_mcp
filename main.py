@@ -5,6 +5,7 @@ import asyncio
 import base64
 import sys
 import argparse
+import json
 
 mcp = FastMCP("mythic_mcp")
 
@@ -78,18 +79,9 @@ async def run_shell_command(agent_id: int, command_line: str):
 
 @mcp.tool()
 async def get_all_agents():
-    """Returns a list of active agents"""
+    """Returns a list of active Mythic agents"""
 
-    output = ""
-
-    agents = await api.get_all_agents()
-
-    for agent in agents:
-        output += f"ID: {agent['id']}\n"
-        output += f"Host: {agent['host']}\n"
-        output += f"User: {agent['user']}\n"
-
-    return output
+    return json.dumps(await api.get_all_agents())
 
 
 @mcp.tool()
