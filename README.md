@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/xpn-mythic-mcp-badge.png)](https://mseep.ai/app/xpn-mythic-mcp)
+
 # Mythic MCP
 
 A quick MCP demo for Mythic, allowing LLMs to pentest on our behalf!
